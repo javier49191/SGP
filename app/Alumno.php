@@ -16,4 +16,7 @@ class Alumno extends Model
     	'es_alumno',
     	'fecha_nacimiento'
     ];
+    public function vinculaciones(){
+        return $this->hasMany(Vinculacione::class);
+    }
 }

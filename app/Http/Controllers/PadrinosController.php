@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Padrino;
 use App\Domicilio;
+use App\Alumno;
+use App\Vinculacione;
 
 class PadrinosController extends Controller
 {
@@ -26,7 +28,14 @@ class PadrinosController extends Controller
      */
     public function create()
     {
-        return view('padrinos.create');
+        $alumnos = \DB::select (\DB::raw("SELECT * FROM alumnos WHERE NOT EXISTS (SELECT * FROM vinculaciones WHERE vinculaciones.alumno_id = alumnos.id)"));
+
+        // $alumnos = Alumno::all();
+        // $vinculaciones = Vinculacione::all();
+
+        // dd($alumnos);
+
+        return view('padrinos.create', compact('alumnos'));
     }
 
     /**

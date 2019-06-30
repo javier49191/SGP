@@ -223,10 +223,12 @@
 					<div class="col-md-12">
 						<label for="alumno">Alumnos sin vinculación</label>
 						<select class="custom-select" name="alumno">
-							<option selected>Open this select menu</option>
-							<option value="1">One</option>
-							<option value="2">Two</option>
-							<option value="3">Three</option>
+							<option selected>Seleccionar...</option>
+							@forelse($alumnos as $alumno)
+								<option value="{{$alumno->id}}">{{$alumno->nombre}}</option>
+							@empty
+								<option>No existen registros</option>
+							@endforelse
 						</select>
 					</div>
 				</div>
