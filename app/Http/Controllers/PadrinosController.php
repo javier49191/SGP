@@ -56,6 +56,7 @@ class PadrinosController extends Controller
             'provincia' => 'required',
             'ciudad' => 'required',
             'piso' => 'numeric',
+            'observaciones' => 'min:2',
         ]);
 
         $data = $request->all();
@@ -89,6 +90,21 @@ class PadrinosController extends Controller
             'domicilio_id' => Domicilio::latest()->first()->id,
             'checklist' => $data['checklist'],
         ]);
+
+        if ($request['se_conocen']) {
+            $data['se_conocen'] = 1;
+        }else{
+            $data['se_conocen'] = 0;
+        }
+
+        Vinculacione::create([
+            'alumno_id' => $data['alumno_id'],
+            'padrino_id' => Padrino::latest()->first()->id,
+            'se_conocen' => $data['se_conocen'],
+            'observaciones' => $data['observaciones'],
+        ]);
+
+        // dd($data);
 
         return redirect()->route('padrinos.index')->with('info', 'Padrino creado!');
 

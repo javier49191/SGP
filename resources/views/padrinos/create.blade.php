@@ -221,8 +221,8 @@
 				<h5 class="bg-light p-3">Vinculación</h5>
 				<div class="row">
 					<div class="col-md-12">
-						<label for="alumno">Alumnos sin vinculación</label>
-						<select class="custom-select" name="alumno">
+						<label for="alumno_id">Alumnos sin vinculación</label>
+						<select class="custom-select" name="alumno_id">
 							<option selected>Seleccionar...</option>
 							@forelse($alumnos as $alumno)
 								<option value="{{$alumno->id}}">{{$alumno->nombre}}</option>
@@ -230,6 +230,27 @@
 								<option>No existen registros</option>
 							@endforelse
 						</select>
+					</div>
+					<div class="form-check ml-3 mt-2">
+						<input class="form-check-input" type="checkbox" value="1" name="se_conocen[0]">
+						<label class="form-check-label" for="se_conocen">
+							Se conocen
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="row mt-3">
+					<div class="col-md-12 form-group">
+						<label for="observaciones">Observaciones</label>
+						<textarea name="observaciones" class="form-control {{$errors->has('observaciones') ? 'is-invalid' : ''}}">{{ old('observaciones') }}</textarea>
+						@error('observaciones')
+						<span class="invalid-feedback" role="alert">
+							<strong>{{ ucfirst($message) }}</strong>
+						</span>
+						@enderror
+					</div>
+				</div>
 					</div>
 				</div>
 

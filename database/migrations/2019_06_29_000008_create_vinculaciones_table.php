@@ -24,7 +24,7 @@ class CreateVinculacionesTable extends Migration
             $table->foreign('alumno_id')->references('id')->on('alumnos')
             ->onDelete('cascade');
 
-            $table->boolean('se_conocen');
+            $table->boolean('se_conocen')->nullable();
             $table->text('observaciones')->nullable();
             $table->dateTime('deleted_at')->nullable();
             $table->timestamps();
