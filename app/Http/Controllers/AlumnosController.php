@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Alumno;
+use App\Vinculacione;
 
 class AlumnosController extends Controller
 {
@@ -15,7 +16,9 @@ class AlumnosController extends Controller
     public function index()
     {
         $alumnos = Alumno::all();
-        return view('alumnos.index', compact('alumnos'));
+        $vinculacion = Vinculacione::all();
+
+        return view('alumnos.index', compact('alumnos', 'vinculacion'));
     }
 
     /**

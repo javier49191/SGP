@@ -18,7 +18,8 @@ class PadrinosController extends Controller
     public function index()
     {
         $padrinos = Padrino::all();
-        return view('padrinos.index', compact('padrinos'));
+        $vinculacion = Vinculacione::all();
+        return view('padrinos.index', compact('padrinos', 'vinculacion'));
     }
 
     /**
@@ -29,11 +30,6 @@ class PadrinosController extends Controller
     public function create()
     {
         $alumnos = \DB::select (\DB::raw("SELECT * FROM alumnos WHERE NOT EXISTS (SELECT * FROM vinculaciones WHERE vinculaciones.alumno_id = alumnos.id)"));
-
-        // $alumnos = Alumno::all();
-        // $vinculaciones = Vinculacione::all();
-
-        // dd($alumnos);
 
         return view('padrinos.create', compact('alumnos'));
     }

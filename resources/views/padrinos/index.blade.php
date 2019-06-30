@@ -20,6 +20,7 @@
 							<th>Apellido</th>
 							<th>Alias</th>
 							<th>email</th>
+							<th class="text-center">Vinculado</th>
 						</thead>
 						<tbody>
 							@forelse($padrinos as $padrino)
@@ -28,6 +29,13 @@
 								<td>{{$padrino->apellido}}</td>
 								<td>{{$padrino->alias}}</td>
 								<td>{{$padrino->email}}</td>
+								<td class="text-center">
+									@if ($vinculacion->firstWhere('padrino_id', $padrino->id))
+									<span class="badge badge-pill badge-success">Si</span>
+									@else
+									<span class="badge badge-pill badge-danger">No</span>
+									@endif
+								</td>
 							</tr>
 							@empty
 							<tr>
