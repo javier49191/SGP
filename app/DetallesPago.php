@@ -12,4 +12,8 @@ class DetallesPago extends Model
     	'comprobante',
     	'descripcion',
     ];
+
+    public function tipoPago(){
+    	return $this->belongsTo(TiposPago::class);
+    }
 }

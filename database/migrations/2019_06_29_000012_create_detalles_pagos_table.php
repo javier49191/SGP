@@ -35,6 +35,6 @@ class CreateDetallesPagosTable extends Migration
     public function down()
     {
         Schema::disableForeignKeyConstraints();
-        Schema::dropIfExists('detalles_pago');
+        Schema::dropIfExists('detalles_pagos');
     }
 }

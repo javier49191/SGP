@@ -38,6 +38,7 @@
 								<td class="alert alert-danger">No hay registros</td>
 								<td class="alert alert-danger">No hay registros</td>
 								<td class="alert alert-danger">No hay registros</td>
+								<td class="alert alert-danger">No hay registros</td>
 							</tr>
 							@endforelse
 						</tbody>
