@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDetallesPagoTable extends Migration
+class CreateTiposPagosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,8 @@ class CreateDetallesPagoTable extends Migration
      */
     public function up()
     {
-        Schema::create('detalles_pago', function (Blueprint $table) {
+        Schema::create('tipos_pagos', function (Blueprint $table) {
             $table->bigIncrements('id');
-
-            $table->unsignedBigInteger('tipo_pago_id');
-            $table->foreign('tipo_pago_id')->references('id')->on('tipos_pago')
-            ->onDelete('cascade');
-
-            $table->integer('factura');
-            $table->string('comprobante');
             $table->string('descripcion');
             $table->timestamps();
         });
@@ -34,7 +27,6 @@ class CreateDetallesPagoTable extends Migration
      */
     public function down()
     {
-        Schema::disableForeignKeyConstraints();
-        Schema::dropIfExists('detalles_pago');
+        Schema::dropIfExists('tipos_pago');
     }
 }

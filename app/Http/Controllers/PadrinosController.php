@@ -56,7 +56,7 @@ class PadrinosController extends Controller
             'provincia' => 'required',
             'ciudad' => 'required',
             'piso' => 'numeric',
-            'observaciones' => 'min:2',
+            // 'observaciones' => 'min:2',
         ]);
 
         $data = $request->all();
@@ -91,18 +91,22 @@ class PadrinosController extends Controller
             'checklist' => $data['checklist'],
         ]);
 
-        if ($request['se_conocen']) {
-            $data['se_conocen'] = 1;
-        }else{
-            $data['se_conocen'] = 0;
+
+        if (isset($data['alumno_id'])) {
+            if ($request['se_conocen']) {
+               $data['se_conocen'] = 1;
+            }else{
+                $data['se_conocen'] = 0;
+            }
+
+            Vinculacione::create([
+                'alumno_id' => $data['alumno_id'],
+                'padrino_id' => Padrino::latest()->first()->id,
+                'se_conocen' => $data['se_conocen'],
+                'observaciones' => $data['observaciones'],
+            ]);
         }
 
-        Vinculacione::create([
-            'alumno_id' => $data['alumno_id'],
-            'padrino_id' => Padrino::latest()->first()->id,
-            'se_conocen' => $data['se_conocen'],
-            'observaciones' => $data['observaciones'],
-        ]);
 
         // dd($data);
 

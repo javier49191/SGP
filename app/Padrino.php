@@ -25,4 +25,8 @@ class Padrino extends Model
     public function domicilio(){
         return $this->belongsTo(Domicilio::class);
     }
+
+    public function pagos(){
+        return $this->hasMany(Pago::class);
+    }
 }

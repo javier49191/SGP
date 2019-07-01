@@ -223,11 +223,11 @@
 					<div class="col-md-12">
 						<label for="alumno_id">Alumnos sin vinculación</label>
 						<select class="custom-select" name="alumno_id">
-							<option selected>Seleccionar...</option>
+							<option selected value>Seleccionar...</option>
 							@forelse($alumnos as $alumno)
 								<option value="{{$alumno->id}}">{{$alumno->nombre}}</option>
 							@empty
-								<option>No existen registros</option>
+								<option disabled>No existen registros</option>
 							@endforelse
 						</select>
 					</div>

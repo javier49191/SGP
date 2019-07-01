@@ -49,8 +49,8 @@
                         <li class="nav-item {{Request::is('padrinos*') ? 'custom_active active' : ''}}">
                             <a class="nav-link" href="{{ route('padrinos.index') }}">Padrinos</a>
                         </li>
-                        <li class="nav-item {{-- {{Request::is('alumnos*') ? 'custom_active active' : ''}} --}}">
-                            <a class="nav-link" href="{{-- {{ route('alumnos.index') }} --}}">Aportes</a>
+                        <li class="nav-item {{Request::is('aportes*') ? 'custom_active active' : ''}}">
+                            <a class="nav-link" href="{{ route('aportes.index') }}">Aportes</a>
                         </li>
                         <li class="nav-item {{-- {{Request::is('alumnos*') ? 'custom_active active' : ''}} --}}">
                             <a class="nav-link" href="{{-- {{ route('alumnos.index') }} --}}">Estados Financieros</a>

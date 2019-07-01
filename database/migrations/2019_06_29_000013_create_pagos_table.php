@@ -18,17 +18,17 @@ class CreatePagosTable extends Migration
             $table->float('monto_pago', 8, 2);
 
             $table->unsignedBigInteger('detalle_pago_id');
-            $table->foreign('detalle_pago_id')->references('id')->on('detalles_pago')
+            $table->foreign('detalle_pago_id')->references('id')->on('detalles_pagos')
             ->onDelete('cascade');
 
-            $table->unsignedBigInteger('vinculacione_id');
-            $table->foreign('vinculacione_id')->references('id')->on('vinculaciones')
+            $table->unsignedBigInteger('padrino_id');
+            $table->foreign('padrino_id')->references('id')->on('padrinos')
             ->onDelete('cascade');
 
             $table->dateTime('fecha_pago');
 
-            $table->unsignedBigInteger('usuario_id');
-            $table->foreign('usuario_id')->references('id')->on('usuarios')
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users')
             ->onDelete('cascade');
 
             $table->timestamps();

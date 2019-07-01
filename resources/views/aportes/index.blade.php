@@ -7,35 +7,30 @@
 		<div class="col-md-12">
 			<div class="card">
 				<div class="card-header">
-					<b>Alumnos</b>
-					<a href="{{ route('alumnos.create') }}" class="btn btn-success float-right">
-						Registrar alumno
+					<b>Aportes</b>
+					<a href="{{ route('aportes.create') }}" class="btn btn-success float-right">
+						Registrar aporte
 					</a>
 				</div>
 
 				<div class="card-body table-responsive">
-					<table id="alumnos" class="table table-bordered table-hover" style="width:100%">
+					<table id="pagos" class="table table-bordered table-hover" style="width:100%">
 						<thead>
-							<th>Nombre</th>
-							<th>Apellido</th>
-							<th>Alias</th>
-							<th>DNI</th>
-							<th class="text-center">Vinculado</th>
+							<th>Padrino</th>
+							<th>Monto</th>
+							<th>Fecha de pago</th>
+							<th>Pago ingresado</th>
+							<th>Usuario</th>
+
 						</thead>
 						<tbody>
-							@forelse($alumnos as $alumno)
+							@forelse($pagos as $pago)
 							<tr>
-								<td>{{$alumno->nombre}}</td>
-								<td>{{$alumno->apellido}}</td>
-								<td>{{$alumno->alias}}</td>
-								<td>{{$alumno->dni}}</td>
-								<td class="text-center">
-									@if ($vinculacion->firstWhere('alumno_id', $alumno->id))
-										<span class="badge badge-pill badge-success">Si</span>
-									@else
-										<span class="badge badge-pill badge-danger">No</span>
-									@endif
-								</td>
+								<td>{{$pago->padrino->nombre}}</td>
+								<td>{{$pago->monto_pago}}</td>
+								<td>{{$pago->fecha_pago->format('d-m-Y')}}</td>
+								<td>{{$pago->created_at->format('d-m-Y')}}</td>
+								<td>{{$pago->user->name}}</td>
 							</tr>
 							@empty
 							<tr>
@@ -85,7 +80,7 @@
 <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
 <script>
 	$(document).ready( function () {
-		$('#alumnos').DataTable({
+		$('#pagos').DataTable({
 			"lengthMenu": [ [5, 10, 25, 50, -1], [5, 10, 25, 50, "All"] ],
 
 			"language": {
