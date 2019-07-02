@@ -20,7 +20,7 @@ class CreateDetallesPagosTable extends Migration
             $table->foreign('tipo_pago_id')->references('id')->on('tipos_pagos')
             ->onDelete('cascade');
 
-            $table->integer('factura');
+            $table->string('factura');
             $table->string('comprobante');
             $table->string('descripcion');
             $table->timestamps();

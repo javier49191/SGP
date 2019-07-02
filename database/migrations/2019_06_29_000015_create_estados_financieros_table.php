@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEstadosFinancieroTable extends Migration
+class CreateEstadosFinancierosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateEstadosFinancieroTable extends Migration
      */
     public function up()
     {
-        Schema::create('estados_financiero', function (Blueprint $table) {
+        Schema::create('estados_financieros', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nombre');
             $table->integer('cantidad_cuotas');
@@ -28,6 +28,6 @@ class CreateEstadosFinancieroTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('estados_financiero');
+        Schema::dropIfExists('estados_financieros');
     }
 }

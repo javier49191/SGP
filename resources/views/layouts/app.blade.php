@@ -52,8 +52,8 @@
                         <li class="nav-item {{Request::is('aportes*') ? 'custom_active active' : ''}}">
                             <a class="nav-link" href="{{ route('aportes.index') }}">Aportes</a>
                         </li>
-                        <li class="nav-item {{-- {{Request::is('alumnos*') ? 'custom_active active' : ''}} --}}">
-                            <a class="nav-link" href="{{-- {{ route('alumnos.index') }} --}}">Estados Financieros</a>
+                        <li class="nav-item {{Request::is('estados*') ? 'custom_active active' : ''}}">
+                            <a class="nav-link" href="{{ route('estados.index') }}">Estados Financieros</a>
                         </li>
 
                     </ul>
