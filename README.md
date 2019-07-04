@@ -1,9 +1,50 @@
 # Sistema de Gestión y Seguimiento de Padrinos SGP
 Repositorio del TFP
 
-_Acá va un párrafo que describa lo que es el proyecto_
+Este es el repositorio para acceder al código de la aplicación y las instrucciones de cómo hacer una copia.
 
-## Comenzando 🚀
+## Opción 1 🚀
+
+_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
+
+1. Descargar laragon (Full 130 MB) https://laragon.org/download/
+Instalarlo y una vez finalizada la instalación, ejecutar el programa y hacer clck en la opción "Start all"
+
+2. Seleccionar la opción "Terminal" del programa y explorar el directorio c:\laragon\www 
+Después ejecutar el siguiente comando:
+git clone https://github.com/javier49191/SGP
+
+3. Luego ejecutar los siguientes comandos:
+cd SGP
+composer install
+
+4. Renombrar el acthivo "env.example" a ".env" y proveer la información de acceso a la base de datos (por defecto es root y sin contraseña)
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=sgp
+DB_USERNAME=
+DB_PASSWORD=
+
+5. Luego ejecutar el siguiente comando
+php artisan key:generate
+
+6. Ir al administrador de base de datos y crear una nueva base de datos con el nombre "sgp"
+
+7. Ejecutar el siguiente comando en terminal
+php artisan migrate --seed
+
+8. Acceder a la aplicación utilizando la dirección http://sgp.test en cualquier explorador de internet
+
+9. Los usuarios para ingresar son:
+_secretaria@secretaria.com_
+_secretaria123_
+
+_encargado@encargado.com_
+_encargado123_
+
+
+## Opción 1 🚀
 
 _Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
