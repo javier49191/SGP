@@ -16,6 +16,7 @@ _Estas instrucciones te permitirán obtener una copia del proyecto en funcionami
 
 1. Descargar laragon (Full 130 MB) desde [aqui](https://laragon.org/download/ "aqui")  
 Instalarlo y una vez finalizada la instalación, ejecutar el programa y hacer clck en la opción "Start all"
+![Con titulo](images/start_all.png "Start all")
 
 2. Seleccionar la opción "Terminal" del programa y explorar el directorio c:\laragon\www 
 Después ejecutar el siguiente comando:
