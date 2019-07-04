@@ -15,12 +15,15 @@ Si se desea hacer una copia de forma local, ir a la opción 2
 _Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
 1. Descargar laragon (Full 130 MB) desde [aqui](https://laragon.org/download/ "aqui")  
-Instalarlo y una vez finalizada la instalación, ejecutar el programa y hacer clck en la opción "Start all"
+Instalarlo y una vez finalizada la instalación, ejecutar el programa y hacer clck en la opción "Start all"  
 ![Con titulo](images/start_all.png "Start all")
 
 2. Seleccionar la opción "Terminal" del programa y explorar el directorio c:\laragon\www 
 Después ejecutar el siguiente comando:
-git clone https://github.com/javier49191/SGP
+git clone https://github.com/javier49191/SGP  
+
+![Con titulo](images/terminal.png "Start all")  
+![Con titulo](images/git_clone.png "Start all")  
 
 3. Luego ejecutar los siguientes comandos:
 cd SGP
