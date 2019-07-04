@@ -5,6 +5,13 @@ Este es el repositorio para acceder al código de la aplicación y las instrucci
 
 ## Opción 1 🚀
 
+_Para acceder a una *demo* online click [aqui](https://tfgsgp.000webhostapp.com/ "aqui")_
+
+Si se desea hacer una copia de forma local, ir a la opción 2
+
+
+## Opción 2 🚀
+
 _Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
 1. Descargar laragon (Full 130 MB) https://laragon.org/download/
@@ -36,19 +43,12 @@ php artisan migrate --seed
 
 8. Acceder a la aplicación utilizando la dirección http://sgp.test en cualquier explorador de internet
 
-9. Los usuarios para ingresar son:
+9. Los usuarios para ingresar son:  
 _secretaria@secretaria.com_
 _secretaria123_
 
 _encargado@encargado.com_
 _encargado123_
-
-
-## Opción 1 🚀
-
-_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
-
-Mira **Deployment** para conocer como desplegar el proyecto.
 
 
 ### Pre-requisitos 📋
