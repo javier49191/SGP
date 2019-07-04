@@ -10,11 +10,11 @@ _Para acceder a una *demo* online click [aqui](https://tfgsgp.000webhostapp.com/
 Si se desea hacer una copia de forma local, ir a la opción 2
 
 
-## Opción 2 🚀
+### Opción 2 🚀
 
 _Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
-1. Descargar laragon (Full 130 MB) https://laragon.org/download/
+1. Descargar laragon (Full 130 MB) desde [aqui](https://laragon.org/download/ "aqui")  
 Instalarlo y una vez finalizada la instalación, ejecutar el programa y hacer clck en la opción "Start all"
 
 2. Seleccionar la opción "Terminal" del programa y explorar el directorio c:\laragon\www 
@@ -30,8 +30,8 @@ DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=sgp
-DB_USERNAME=
-DB_PASSWORD=
+DB_USERNAME=_usuario de la base de datos_
+DB_PASSWORD=_Contraseña de la base de datos_
 
 5. Luego ejecutar el siguiente comando
 php artisan key:generate
