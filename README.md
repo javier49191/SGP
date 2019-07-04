@@ -10,7 +10,7 @@ Este es el repositorio para acceder al código de la aplicación y las instrucci
 Si se desea hacer una copia de forma local, ir a la opción 2
 
 
-## Opción 2 🚀
+## Opción 2 📋
 
 _Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
