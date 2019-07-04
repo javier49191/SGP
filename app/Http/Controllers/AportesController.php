@@ -12,16 +12,8 @@ use Carbon\Carbon;
 class AportesController extends Controller
 {
     public function __construct(){
-        Carbon::setLocale('es');
-    }
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
         $this->middleware('auth');
+        Carbon::setLocale('es');
     }
     /**
      * Display a listing of the resource.
