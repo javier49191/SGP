@@ -19,8 +19,10 @@ Instalarlo y una vez finalizada la instalación, ejecutar el programa y hacer cl
 
 ![Con titulo](images/start_all.png "Start all")
 
-2. Seleccionar la opción "Terminal" del programa y explorar el directorio c:\laragon\www 
-Después ejecutar el siguiente comando:
+2. Seleccionar la opción "Terminal" del programa y explorar el directorio c:\laragon\www  
+
+Después ejecutar el siguiente comando:  
+
 git clone https://github.com/javier49191/SGP  
 
 ![Con titulo](images/terminal.png "Terminal")  
