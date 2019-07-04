@@ -67,7 +67,7 @@ _encargado123_
 
 ## Autor ✒️
 
-* **Javier Gimenenz**  
+* **Javier Gimenez**  
 
 ## Gracias! 🤓
 
