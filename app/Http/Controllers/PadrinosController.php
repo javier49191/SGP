@@ -131,7 +131,9 @@ class PadrinosController extends Controller
      */
     public function show($id)
     {
-        //
+        $padrino = Padrino::findOrFail($id);
+        $vinculaciones = Vinculacione::where('padrino_id', $id)->get();
+        return view('padrinos.show', compact('padrino','vinculaciones'));
     }
 
     /**

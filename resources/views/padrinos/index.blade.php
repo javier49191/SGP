@@ -25,7 +25,11 @@
 						<tbody>
 							@forelse($padrinos as $padrino)
 							<tr>
-								<td>{{$padrino->nombre}}</td>
+								<td>
+									<a href="{{ route('padrinos.show', $padrino->id) }}">
+									{{$padrino->nombre}}
+									</a>
+								</td>
 								<td>{{$padrino->apellido}}</td>
 								<td>{{$padrino->alias}}</td>
 								<td>{{$padrino->email}}</td>
