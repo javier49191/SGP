@@ -28,15 +28,12 @@ git clone https://github.com/javier49191/SGP
 ![Con titulo](images/terminal.png "Terminal")
 ![Con titulo](images/git_clone.png "Git clone")
 
-3. Luego ejecutar los siguientes comandos:
-
-cd SGP
-
-composer install
+3. Luego ejecutar los siguientes comandos:<br/>
+cd SGP<br/>
+composer install<br/>
 
 
-4. Renombrar el acthivo "env.example" a ".env" y proveer la información de acceso a la base de datos (por defecto es root y sin contraseña)
-
+4. Renombrar el acthivo "env.example" a ".env" y proveer la información de acceso a la base de datos (por defecto es root y sin contraseña)<br/>
 DB_CONNECTION=mysql<br/>
 DB_HOST=127.0.0.1<br/>
 DB_PORT=3306<br/>
@@ -45,15 +42,15 @@ DB_USERNAME=_usuario de la base de datos_<br/>
 DB_PASSWORD=_Contraseña de la base de datos_<br/>
 
 
-5. Luego ejecutar en terminal el siguiente comando:
-php artisan key:generate
+5. Luego ejecutar en terminal el siguiente comando:<br/>
+php artisan key:generate<br/>
 
 ![Con titulo](images/key_generate.png "Key Genenrate")
 
 6. Ir al administrador de base de datos y crear una nueva base de datos con el nombre *"sgp"*
 
-7. Ejecutar el siguiente comando en terminal:
-php artisan migrate --seed
+7. Ejecutar el siguiente comando en terminal:<br/>
+php artisan migrate --seed<br/>
 
 ![Con titulo](images/db_seed.png "Database")
 
@@ -63,11 +60,11 @@ php artisan migrate --seed
 
 9. Los usuarios para ingresar son:
 
-_secretaria@secretaria.com_
-_secretaria123_
+_secretaria@secretaria.com_<br/>
+_secretaria123_<br/>
 
-_encargado@encargado.com_
-_encargado123_
+_encargado@encargado.com_<br/>
+_encargado123_<br/>
 
 
 ## Autor ✒️
