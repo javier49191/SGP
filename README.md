@@ -37,17 +37,12 @@ composer install
 
 4. Renombrar el acthivo "env.example" a ".env" y proveer la información de acceso a la base de datos (por defecto es root y sin contraseña)
 
-DB_CONNECTION=mysql
-
-DB_HOST=127.0.0.1
-
-DB_PORT=3306
-
-DB_DATABASE=sgp
-
-DB_USERNAME=_usuario de la base de datos_
-
-DB_PASSWORD=_Contraseña de la base de datos_
+DB_CONNECTION=mysql<br/>
+DB_HOST=127.0.0.1<br/>
+DB_PORT=3306<br/>
+DB_DATABASE=sgp<br/>
+DB_USERNAME=_usuario de la base de datos_<br/>
+DB_PASSWORD=_Contraseña de la base de datos_<br/>
 
 
 5. Luego ejecutar en terminal el siguiente comando:
