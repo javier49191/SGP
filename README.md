@@ -29,16 +29,26 @@ git clone https://github.com/javier49191/SGP
 ![Con titulo](images/git_clone.png "Git clone")
 
 3. Luego ejecutar los siguientes comandos:
+
 cd SGP
+
 composer install
 
+
 4. Renombrar el acthivo "env.example" a ".env" y proveer la información de acceso a la base de datos (por defecto es root y sin contraseña)
+
 DB_CONNECTION=mysql
+
 DB_HOST=127.0.0.1
+
 DB_PORT=3306
+
 DB_DATABASE=sgp
+
 DB_USERNAME=_usuario de la base de datos_
+
 DB_PASSWORD=_Contraseña de la base de datos_
+
 
 5. Luego ejecutar en terminal el siguiente comando:
 php artisan key:generate
