@@ -64,8 +64,7 @@ php artisan migrate --seed<br/>
 
 ![Con titulo](images/login.png "Login")
 
-9. Los usuarios para ingresar son:
-
+9. Los usuarios para ingresar son:</br>
 _secretaria@secretaria.com_<br/>
 _secretaria123_<br/>
 
