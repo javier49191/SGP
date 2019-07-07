@@ -5,9 +5,16 @@ Este es el repositorio para acceder al código de la aplicación y las instrucci
 
 ## Opción 1 🚀
 
-### Para acceder a una *demo* online click [aqui](https://tfgsgp.000webhostapp.com/ "aqui")
+### Para acceder a una *demo* online click [aqui](https://tfgsgp.000webhostapp.com/ "aqui")  
+Los usuarios para ingresar son:</br>
 
-Si se desea hacer una copia de forma local, ir a la opción 2
+_secretaria@secretaria.com_<br/>
+_secretaria123_<br/>
+
+_encargado@encargado.com_<br/>
+_encargado123_<br/>
+
+#### Si se desea hacer una copia de forma local, ir a la opción 2
 
 
 ## Opción 2 📋
